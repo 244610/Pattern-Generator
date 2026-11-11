@@ -8,15 +8,15 @@ public class Patterns {
      //Postcondition: Returns a right triangle of asterisks with the inputted rows value being the character count of the bottom row
      public static void stars(int rows){
           int i = 1;
-          int j = 0;
+          int j = 1;
 
           while(i < rows + 1){
-               while (j < i){
+               while (j > 0){
                     System.out.print("*");
-                    j++;
+                    j--;
                }
                System.out.println();
-               j = 0;
+               j = (i + 1) * 2 - 1;
 
                i++;
           }
@@ -110,7 +110,7 @@ public class Patterns {
           for (int i = 1; i <= rows; i++){
 
 
-               for (int j = 0; j < i; j++){
+               for (int j = 1; j < i; j++){
                     System.out.print(" ");
                }
                
